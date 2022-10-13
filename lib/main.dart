@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart'; //widgets material provistos para sdk flutter
 import 'description_place.dart';
+import 'review_list.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -8,6 +9,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
+
+
 
   String descriptionDummy =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non bibendum justo, ac pretium nisl. Sed eu magna vitae nulla eleifend feugiat sed et urna. ";
@@ -32,7 +35,8 @@ class MyApp extends StatelessWidget {
               title: const Center(
             child: Text("Title"),
           )),
-          body: DescriptionPlace("Tijuana", 4, descriptionDummy),
+          //body: DescriptionPlace("Tijuana", 4, descriptionDummy),
+          body: ReviewList(),
         ));
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget {
-  String pathImage = "assets/images/marin.jpg";
+  String pathImage;
   String name = "Marin Kitagawa";
   String details = "1 review 5 photos";
   String comment = "There is a nice place";
@@ -17,14 +17,32 @@ class Review extends StatelessWidget {
       child: Text(
         name,
         textAlign: TextAlign.left,
-        style: TextStyle(fontSize: 7.0, fontFamily: "Lato"),
+        style: TextStyle(fontSize: 17.0, fontFamily: "Lato"),
+      ),
+    );
+
+    final userInfo = Container(
+      margin: EdgeInsets.only(left: 20.0),
+      child: Text(
+        details,
+        textAlign: TextAlign.left,
+        style: TextStyle(fontSize: 13.0, fontFamily: "Lato", color: Color(0xFFA3A5A7)),
+      ),
+    );
+
+    final userComment = Container(
+      margin: EdgeInsets.only(left: 20.0),
+      child: Text(
+        comment,
+        textAlign: TextAlign.left,
+        style: TextStyle(fontSize: 13.0, fontFamily: "Lato", fontWeight: FontWeight.w900),
       ),
     );
 
     final userDetails = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        userName,
+        userName, userInfo, userComment,
       ],
     );
 
@@ -39,7 +57,7 @@ class Review extends StatelessWidget {
     );
 
     return Row(
-      children: <Widget>[photo],
+      children: <Widget>[photo, userDetails],
     );
   }
 }
