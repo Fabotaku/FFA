@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart'; //widgets material provistos para sdk flutter
 import 'description_place.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
+  String descriptionDummy =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non bibendum justo, ac pretium nisl. Sed eu magna vitae nulla eleifend feugiat sed et urna. ";
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -27,9 +30,9 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
               title: const Center(
-            child: Text("Hola mundo feliz"),
+            child: Text("Title"),
           )),
-          body: new DescriptionPlace(),
+          body: DescriptionPlace("Tijuana", 4, descriptionDummy),
         ));
   }
 }
