@@ -32,10 +32,7 @@ class MyApp extends StatelessWidget {
             // is not restarted.
             primarySwatch: Colors.green),
         home: Scaffold(
-          appBar: AppBar(
-              title: const Center(
-            child: Text("Reviews"),
-          )),
+          
           //body: DescriptionPlace("Tijuana", 4, descriptionDummy),
           body: Stack(
             children:<Widget> [
@@ -45,7 +42,7 @@ class MyApp extends StatelessWidget {
                   ReviewList()
                 ],
               ),
-            GradientBack()
+            GradientBack("Popular")
             ],
           ),
         ));
