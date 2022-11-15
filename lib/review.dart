@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'description_place.dart';
+import 'rating.dart';
 
 class Review extends StatelessWidget {
   String pathImage;
   String name = "Marin Kitagawa";
   String details = "1 review 5 photos";
   String comment = "There is a nice place";
+  double stars = 5;
 
-  Review(this.pathImage, this.name, this.details, this.comment);
+  Review(this.pathImage, this.name, this.details, this.stars,this.comment);
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +24,20 @@ class Review extends StatelessWidget {
       ),
     );
 
-    final userInfo = Container(
-      margin: EdgeInsets.only(left: 20.0),
-      child: Text(
-        details,
-        textAlign: TextAlign.left,
-        style: TextStyle(fontSize: 13.0, fontFamily: "Lato", color: Color(0xFFA3A5A7)),
-      ),
+    final userInfo = Row(
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.only(left: 20.0),
+          child: Text(details,
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                fontFamily: 'Lato',
+                fontSize: 13.0,
+                color: Color(0xFFa3a5a7),
+              )),
+        ),
+        Rating(stars, 5.0, 14.0)
+      ],
     );
 
     final userComment = Container(

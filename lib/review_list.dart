@@ -8,8 +8,10 @@ class ReviewList extends StatelessWidget{
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Review("assets/images/jesse.jpg", "Jesse Pinkman", "2 reviews 1 photo", "b"),
-        Review("assets/images/marin.jpg", "Marin Kitagawa", "4 reviews 5 photo", "a"),
+        Review("assets/images/jesse.jpg", "Jesse Pinkman", "2 reviews 1 photo",5 ,"New Mexico"),
+        Review("assets/images/marin.jpg", "Marin Kitagawa", "4 reviews 5 photo",3.5, "Tokyo"),
+        Review("assets/images/marin.jpg", "Marin Kitagawa", "4 reviews 5 photo",3.5, "Tokyo"),
+        Review("assets/images/marin.jpg", "Marin Kitagawa", "4 reviews 5 photo",3.5, "Tokyo"),
       ],
     );
   }

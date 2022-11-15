@@ -2,6 +2,7 @@ import 'package:flutter/material.dart'; //widgets material provistos para sdk fl
 import 'description_place.dart';
 import 'review_list.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'gradient_back.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,10 +34,20 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
               title: const Center(
-            child: Text("Title"),
+            child: Text("Reviews"),
           )),
           //body: DescriptionPlace("Tijuana", 4, descriptionDummy),
-          body: ReviewList(),
+          body: Stack(
+            children:<Widget> [
+              ListView(
+                children: <Widget>[
+                  DescriptionPlace("Tijuana", 4, descriptionDummy),
+                  ReviewList()
+                ],
+              ),
+            GradientBack()
+            ],
+          ),
         ));
   }
 }
