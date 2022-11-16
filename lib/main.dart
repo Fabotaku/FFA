@@ -3,6 +3,8 @@ import 'description_place.dart';
 import 'review_list.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'gradient_back.dart';
+import 'package:flutter/services.dart';
+import 'header_appbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]); //desactivar overlay UI de android
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -38,14 +41,15 @@ class MyApp extends StatelessWidget {
             children:<Widget> [
               ListView(
                 children: <Widget>[
-                  DescriptionPlace("Tijuana", 4, descriptionDummy),
+                  DescriptionPlace("Grand Line", 5, descriptionDummy),
                   ReviewList()
                 ],
               ),
-            GradientBack("Popular")
+            HeaderAppBar()
             ],
           ),
-        ));
+        )
+      );
   }
 }
 
